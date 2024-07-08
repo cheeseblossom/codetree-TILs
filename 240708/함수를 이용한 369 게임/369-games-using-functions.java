@@ -12,10 +12,11 @@ public class Main {
     }
 
     public static boolean isTSN(int i) {
-        String str = String.valueOf(i);
-        String regex = "(.*)[369](.*)";
-        if (str.matches(regex)) {
-            return true;
+        while (i > 0) {
+            if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9) {
+                return true;
+            }
+            i = i / 10;
         }
         return false;
     }
