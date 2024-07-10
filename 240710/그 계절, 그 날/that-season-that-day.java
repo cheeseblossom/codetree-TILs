@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static boolean isYoonYear(int n) {
-        if (n % 4 == 0) {
+        if (n % 4 == 0 && n % 100 == 0 && n % 400 == 0) {
             return true;
         }
         if (n % 4 == 0 && n % 100 == 0) {
             return false;
         }
-        if (n % 4 == 0 && n % 100 == 0 && n % 400 == 0) {
+        if (n % 4 == 0) {
             return true;
         }
+        
         return false;
     }
     public static void checkDate(int y, int m, int d) {
