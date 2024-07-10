@@ -12,13 +12,13 @@ public class Main {
             if (b >= 3 && b <= 5) {
                 System.out.println("Spring");
             }
-            if (b >= 6 && b <= 8) {
+            else if (b >= 6 && b <= 8) {
                 System.out.println("Summer");
             }
-            if (b >= 9 && b <= 11) {
+            else if (b >= 9 && b <= 11) {
                 System.out.println("Fall");
             }
-            if (b == 12 || b <= 2) {
+            else {
                 System.out.println("Winter");
             }
         }
