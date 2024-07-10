@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static boolean isYoonYear(int n) {
-        if (n % 4 == 0 && n % 100 == 0 && n % 400 == 0) {
+        if ((n % 4 == 0 && n % 100 == 0) || n % 400 == 0) {
             return true;
         }
         if (n % 4 == 0 && n % 100 == 0) {
@@ -32,13 +32,10 @@ public class Main {
                 System.out.println("-1");
             }
         }
-        else if (m == 4 || m == 6 || m == 9 || m == 11) {
+        else  {
             if (d > 30) {
                 System.out.println("-1");
             }
-        }
-        else {
-            System.out.println("-1");
         }
 
         if (3 <= m && m <= 5) {
