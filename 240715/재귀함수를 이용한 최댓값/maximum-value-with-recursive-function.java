@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int[] arr = new int[101];
+    public static int[] arr = new int[100];
     public static int cnt = 0;
 
     public static void main(String[] args) {
@@ -10,24 +10,13 @@ public class Main {
         for (int i=0; i<a; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.print(find(a));
+        System.out.print(maxValue(a-1));
     }
-
-    public static int find(int n) {
-        int num = arr[cnt];
-
-        if (cnt == n) {
-            return n;
+    
+    public static int maxValue(int n) {
+        if (n == 0) {
+            return arr[0];
         }
-
-        cnt++;
-        if (num > n) {
-            return find(num);
-        }
-        else {
-            return find(n);
-        }
+        return Math.max(maxValue(n-1), arr[n]);
     }
-
-
 }
