@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class Main {
                 count++;
             }
         }
-        Arrays.sort(arr2, 0, count);
+        Arrays.sort(arr2, Comparator.nullsLast(Comparator.naturalOrder()));
         System.out.print(arr2[k-1]);
     }
 }
