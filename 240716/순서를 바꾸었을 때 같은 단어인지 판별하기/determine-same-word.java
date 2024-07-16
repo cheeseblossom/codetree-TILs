@@ -14,15 +14,17 @@ public class Main {
         Arrays.sort(arr2);
 
         boolean check = true;
-        for (int i=0; i<arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
-                check = false;
-                break;
-            }
-        }
-
+        
         if (arr1.length != arr2.length) {
             check = false;
+        }
+        else {
+            for (int i=0; i<arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    check = false;
+                    break;
+                }
+            }
         }
         
         if (check) {
