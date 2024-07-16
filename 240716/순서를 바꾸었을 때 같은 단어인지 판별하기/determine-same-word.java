@@ -20,6 +20,10 @@ public class Main {
                 break;
             }
         }
+
+        if (arr1.length != arr2.length) {
+            check = false;
+        }
         
         if (check) {
             System.out.print("Yes");
