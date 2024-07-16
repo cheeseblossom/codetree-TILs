@@ -8,8 +8,8 @@ public class Main {
         int[] arr = new int[a];
         for (int i=0; i<a; i++) {
             arr[i] = sc.nextInt();
-            if ((i+1) % 2 != 0) {
-                Arrays.sort(arr, 0, i);
+            if (i % 2 == 0) {
+                Arrays.sort(arr, 0, i+1);
                 System.out.print(arr[i/2] + " ");
             }
         }
