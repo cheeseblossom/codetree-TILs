@@ -13,21 +13,10 @@ public class Main {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-        boolean check = true;
-        
-        if (arr1.length != arr2.length) {
-            check = false;
-        }
-        else {
-            for (int i=0; i<arr1.length; i++) {
-                if (arr1[i] != arr2[i]) {
-                    check = false;
-                    break;
-                }
-            }
-        }
-        
-        if (check) {
+        String sortedStr1 = new String(arr1);
+        String sortedStr2 = new String(arr2);
+
+        if (sortedStr1.equals(sortedStr2)) {
             System.out.print("Yes");
         }
         else {
