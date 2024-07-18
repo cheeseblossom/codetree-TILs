@@ -15,7 +15,7 @@ class MyObject implements Comparable<MyObject> {
     public int compareTo(MyObject my) {
         if (this.height == my.height) {
             if (this.weight == my.weight) {
-                return this.num - my.weight;
+                return this.num - my.num;
             }
             return my.weight - this.weight;
         }
