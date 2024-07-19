@@ -18,8 +18,11 @@ public class Main {
             int temp = m1;
             m1 = m2;
             m2 = temp;
+            temp = d1;
+            d1 = d2;
+            d2 = temp;
         }
-        else {
+        else if (m1 == m2) {
             if (d1 > d2) {
                 isReverse = true;
                 int temp = d1;
@@ -43,7 +46,6 @@ public class Main {
         if (isReverse) {
             gap = gap * -1;
         }
-
         int result = gap % 6;
         System.out.println(day[result+1]);
     }
