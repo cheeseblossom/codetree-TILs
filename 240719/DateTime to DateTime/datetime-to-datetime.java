@@ -9,7 +9,7 @@ public class Main {
         int c = sc.nextInt();
         int result = 0;
 
-        if ((a-d) + (b-h) + (c-m) < 0) {
+        if ((a-d) < 0 && (b-h) < 0 && (c-m) < 0) {
             System.out.print(-1);
         }
         else {
