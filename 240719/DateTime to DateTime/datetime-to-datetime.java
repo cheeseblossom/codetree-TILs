@@ -7,27 +7,11 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        int result = 0;
-
-        if ((a < 11) || (a == 11 && b < 11) || (a == 11 && b == 11 && c < 11)) {
+        int result = (a * 24 * 60 + b * 60 + c) - (11 * 24 * 60 + 11 * 60 + 11);
+        if (result < 0) {
             System.out.print(-1);
         }
         else {
-            while (true) {
-                if (d == a && h == b && m == c) {
-                    break;
-                }
-                m++;
-                result++;
-                if (m == 60) {
-                    m = 0;
-                    h++;
-                }
-                if (h == 24) {
-                    h = 0;
-                    d++;
-                }
-            }
             System.out.print(result);
         }
     }
