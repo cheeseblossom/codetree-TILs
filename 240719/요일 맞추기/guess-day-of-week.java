@@ -36,7 +36,7 @@ public class Main {
             }
             d1++;
             gap++;
-            if (d1 == arr[m1]) {
+            if (arr[m1] < d1) {
                 d1 = 1;
                 m1++;
             }
