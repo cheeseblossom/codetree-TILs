@@ -45,6 +45,9 @@ public class Main {
         }
 
         int result = gap % 7;
+        if (result < -1) {
+            result += 9;
+        }
         System.out.print(day[1+result]);
     }
 }
