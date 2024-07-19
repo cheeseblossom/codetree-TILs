@@ -10,9 +10,8 @@ public class Main {
         int d1 = sc.nextInt();
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
-        boolean isReverse = false;
-        int gap = 0;
 
+        boolean isReverse = false;
         if (m1 > m2) {
             isReverse = true;
             int temp = m1;
@@ -20,7 +19,7 @@ public class Main {
             m2 = temp;
             temp = d1;
             d1 = d2;
-            d2 = temp;
+            d2 = d1;
         }
         else if (m1 == m2) {
             if (d1 > d2) {
@@ -30,7 +29,7 @@ public class Main {
                 d2 = temp;
             }
         }
-
+        int gap = 0;
         while (true) {
             if (m1 == m2 && d1 == d2) {
                 break;
@@ -44,9 +43,18 @@ public class Main {
         }
 
         if (isReverse) {
-            gap = gap * -1;
+            gap %= 7;
+            if (gap < 2) {
+                gap = 7 + gap;
+            }
+            System.out.print(day[8-gap]);
         }
-        int result = gap % 6;
-        System.out.println(day[result+1]);
+        else {
+            gap %= 7;
+            if (gap == 6) {
+                gap = -1;
+            }
+            System.out.print(day[gap+1]);
+        }
     }
 }
