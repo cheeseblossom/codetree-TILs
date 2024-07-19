@@ -44,12 +44,7 @@ public class Main {
             gap = gap * -1;
         }
 
-        int result = gap % 7;
-        
-        if (result < 0) {
-            result = 7 - Math.abs(result);
-        }
-        result %= 6;
-        System.out.println(day[result]);
+        int result = gap % 6;
+        System.out.println(day[result+1]);
     }
 }
