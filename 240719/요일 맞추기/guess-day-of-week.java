@@ -49,7 +49,7 @@ public class Main {
         if (result < 0) {
             result = 7 - Math.abs(result);
         }
-        result = result % 6;
-        System.out.print(day[result]);
+        result %= 6;
+        System.out.println(day[result]);
     }
 }
