@@ -20,7 +20,7 @@ public class Main {
 
         d1 += index;
 
-        int[] dates = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] dates = new int[]{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int result = 0;
         while (true) {
             if (m1 == m2 && d1 >= d2) {
