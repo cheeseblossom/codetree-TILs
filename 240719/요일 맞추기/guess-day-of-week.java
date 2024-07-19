@@ -48,6 +48,7 @@ public class Main {
         if (result < -1) {
             result += 9;
         }
+        result %= 7;
         System.out.print(day[1+result]);
     }
 }
