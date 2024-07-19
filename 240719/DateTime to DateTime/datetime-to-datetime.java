@@ -9,7 +9,7 @@ public class Main {
         int c = sc.nextInt();
         int result = 0;
 
-        if ((a-d) < 0 && (b-h) < 0 && (c-m) < 0) {
+        if ((a < 11) || (a == 11 && b < 11) || (a == 11 && b == 11 && c < 11)) {
             System.out.print(-1);
         }
         else {
