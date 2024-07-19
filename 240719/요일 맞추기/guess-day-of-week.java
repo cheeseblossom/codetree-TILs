@@ -45,10 +45,11 @@ public class Main {
         }
 
         int result = gap % 7;
-        if (result < -1) {
-            result += 9;
+        
+        if (result < 0) {
+            result = 7 - Math.abs(result);
         }
-        result %= 7;
-        System.out.print(day[1+result]);
+        result = result % 6;
+        System.out.print(day[result]);
     }
 }
