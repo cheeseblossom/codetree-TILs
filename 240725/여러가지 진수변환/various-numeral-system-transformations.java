@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int b = sc.nextInt();
+        int[] result = new int[50];
+        int cnt = 0;
+
+        while (true) {
+            if (n < b) {
+                result[cnt++] = n;
+                break;
+            }
+            result[cnt++] = n % b;
+            n /= b;
+        }
+
+        for (int i=cnt-1; i>=0; i--) {
+            System.out.print(result[i]);
+        }
+    }
+}
